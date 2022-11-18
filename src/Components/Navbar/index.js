@@ -1,10 +1,10 @@
 import { NavBarContainer, DropdownOptionStyle } from "./style";
-import { DropdownOption, DropDownProvider } from '../Dropdown'
+import { DropdownOption, DropdownProvider, DropdownRoot } from '../Dropdown'
 import {Products, Developers, Company} from '../Content'
 
 export function Navbar() {
   return (
-    <DropDownProvider>
+    <DropdownProvider>
       <DropdownOptionStyle>
         <NavBarContainer>
           <ul>
@@ -28,7 +28,9 @@ export function Navbar() {
             </li>
           </ul>
         </NavBarContainer>
+
+        <DropdownRoot/>
       </DropdownOptionStyle>
-    </DropDownProvider>
+    </DropdownProvider>
   )
 }
